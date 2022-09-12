@@ -16,20 +16,47 @@ console.log(addToCollection("Let It Be","The Beatles",1970));
 console.log(addToCollection("Best Day Ever","Mac Miller",2011));
 console.log(collection);
 
-/*
-let text = "";
-for(let x of collection) {
-     text= x;
-     for(let j in collection[x]) {
-        text += collection[x][j];
-     }
-     console.log(text);
+ 
+
+  
+
+function showCollection(arr) {
+    let text;
+    console.log("Items in array:",arr.length)
+    for(let x of arr) {
+         text= x;
+         console.log('"'+x.title+'"' + ' by ' + x.artist + ', published in '+ x.yearPublished);
+         for(let j of arr) {
+            text = j;
+
+         }
+
+    }
+ 
 }
- */
 
-function showCollection() {
+ showCollection(collection);
 
-}
+ // Now I'm going to create a new array and input it's value into showCollection() to test it.
 
-showCollection();
+ const rap = [
+    {
+        title: "Mansion",
+        artist: "NF",
+        yearPublished: 2015
+    },
+    {
+        title: "The Chronic",
+        artist: "Dr. Dre",
+        yearPublished: 1992
+    },
+    {
+        title: "The Eminem Show",
+        artist: "Eminem",
+        yearPublished: 2002
+    }
+];
+
+ showCollection(rap);
+
 
