@@ -15,4 +15,20 @@ console.log(addToCollection("Bad","Michael Jackson",1987));
 console.log(addToCollection("Let It Be","The Beatles",1970));
 console.log(addToCollection("Best Day Ever","Mac Miller",2011));
 console.log(collection);
- 
+
+/*
+let text = "";
+for(let x of collection) {
+     text= x;
+     for(let j in collection[x]) {
+        text += collection[x][j];
+     }
+     console.log(text);
+}
+ */
+
+function showCollection() {
+
+}
+
+showCollection();
