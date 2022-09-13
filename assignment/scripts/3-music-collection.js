@@ -1,5 +1,6 @@
 console.log('***** Music Collection *****')
 let collection = []; 
+console.log(collection);
  
   
 function addToCollection(title,artist,yearPublished) {
@@ -24,17 +25,14 @@ function showCollection(arr) {
     let text;
     console.log("Items in array:",arr.length)
     for(let x of arr) {
-         text= x;
+         text = x;
          console.log('"'+x.title+'"' + ' by ' + x.artist + ', published in '+ x.yearPublished);
          for(let j of arr) {
             text = j;
-
          }
-
     }
  
-}
-
+};
  showCollection(collection);
 
  // Now I'm going to create a new array and input it's value into showCollection() to test it.
@@ -58,5 +56,24 @@ function showCollection(arr) {
 ];
 
  showCollection(rap);
+// It checks out!
 
+let artist = [];
+function findByArtist(artist) {
+    let matching = [];
+    text="";
+     for(let x of collection) {
+        console.log(x.artist);
 
+          for(let j in collection) {
+            console.log(collection.artist);
+
+         }
+       
+   }
+    return artistCheck;
+}
+
+console.log(findByArtist("The Beatles"));
+
+ 
