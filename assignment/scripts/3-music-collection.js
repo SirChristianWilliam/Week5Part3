@@ -57,23 +57,23 @@ function showCollection(arr) {
 
  showCollection(rap);
 // It checks out!
-
-let artist = [];
-function findByArtist(artist) {
+console.log("-----break-----")
+   function findByArtist(artist) {
     let matching = [];
-    text="";
-     for(let x of collection) {
-        console.log(x.artist);
-
-          for(let j in collection) {
-            console.log(collection.artist);
-
-         }
-       
-   }
-    return artistCheck;
-}
+       for(let x of collection) {
+         if(artist == x.artist) {
+            console.log(x);
+            matching.push(x);
+           }  
+   } 
+   return matching;
+ };
 
 console.log(findByArtist("The Beatles"));
+console.log(findByArtist("The Wiggles"));
+console.log(findByArtist("NF"));
 
- 
+
+
+
+
