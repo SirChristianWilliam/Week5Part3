@@ -13,6 +13,8 @@ console.log(addToCollection("Thriller","Michael Jackson",1982));
 console.log(addToCollection("Abbey Road","The Beatles",1969));
 console.log(addToCollection("Bad","Michael Jackson",1987));
 console.log(addToCollection("Let It Be","The Beatles",1970));
+console.log(addToCollection("Good Times","The Beatles",1970));
+
 console.log(addToCollection("Best Day Ever","Mac Miller",2011));
 console.log(collection);
 
@@ -81,6 +83,28 @@ console.log(findByArtist("Danny Devito"));
 // I could not find a way to accomplish this and I've spent probably around 5 hours
 // or more on it now. I have a working function, so I will be moving on for now. Thanks.
 
+console.log("-----stretch goals below-----")
 
+function search(search) {
+    let searchedArray = [];
+    if(!search) {
+        searchedArray == collection;
+        console.log("Input required, returning collection")
+        return collection;
+    };
+    for(let x of collection) {
+       if(search.artist === x.artist && search.year === x.yearPublished) {
+        searchedArray.push(x);
+         }       
+};
+return searchedArray;  
+};
 
+console.log(search({artist:"The Beatles",year:1970}));
+console.log(search());
+console.log(search(""));
+console.log(search(null));
 
+console.log(search(undefined));
+
+console.log(search({artist:"Scooby Doo",year:1995}));
