@@ -87,7 +87,6 @@ console.log(findByArtist("Danny Devito"));
 // of the array's contents, then I would like to return a string "false". 
 // I could not find a way to accomplish this and I've spent probably around 5 hours
 // or more on it now. I have a working function, so I will be moving on for now. Thanks.
-let trackName = [{name:"Tabbyroad",duration:"4:20"}];
 
 console.log("-----stretch goals below-----")
  function search(search) {
@@ -98,14 +97,16 @@ console.log("-----stretch goals below-----")
         searchedArray == collection;
         console.log("Input required, returning collection");
         return collection;
-    }   else if(collection[x].tracks[0].name === trackName[0].name && search.artist === collection[x].artist && search.year === collection[x].yearPublished) {
-         searchedArray.push(collection[x].tracks);
-         console.log("BARBABRAR");
-    
-    } else if (search.artist === collection[x].artist && search.year === collection[x].yearPublished) {
+    }  else if (!search.trackName) {
+        if (search.artist === collection[x].artist && search.year === collection[x].yearPublished)  {
             searchedArray.push(collection[x]);
-            console.log("YOYO");
-           }
+     }
+
+    } else if(collection[x].tracks[0].name === search.trackName[0].name && collection[x].tracks[0].duration === search.trackName[0].duration && search.artist === collection[x].artist && search.year === collection[x].yearPublished) {
+         searchedArray.push(collection[x].tracks);
+     
+    }  
+           
    
         
         }
@@ -115,6 +116,7 @@ return searchedArray;
 
 
 
+let trackName = [{name:"Tabbyroad",duration:"4:20"}];
 
 console.log(search({artist:"Ray Charles",year:1957})); //Original input
 console.log(search({artist:"The Beatles",year:1970})); //Testing
@@ -130,6 +132,6 @@ console.log("---adding tracks(stretch question)-----");
  
  console.log(search({artist:"The Beatles",year:1969,trackName})); //Testing
 console.log(search({artist:"Michael Jackson",year:1987,trackName})); //Testing
-console.log(trackName[0].name);
-console.log(collection[2].tracks[0].name)
+
+ 
  
